@@ -1,0 +1,32 @@
+User: {
+    "id": "userId",
+    "posts": ["postId1", "postId2"],
+    "userId": "id",
+    "username": "name",
+    "tracks": ["trackId", "trackId", "trackId"]
+}
+
+Track: {
+    "id": "trackId",
+    "urlToRetrieveAudioFromBucket": "//aws.amazon.s3....",
+    "urlToRetrieveProjectAudioFromBucket":"//aws.amazon.s3....",
+    "parentTrack": "trackId",
+    "trackName": "trackName",
+    "trackDetails": "some stuff about the track"
+}
+
+Comment: {
+    "id": "commentId",
+    "userId": "userId",
+    "content": "blah blah"
+}
+
+UserLikesTrack: {
+    "userId": "userId",
+    "trackId": "trackId"
+}
+
+FollowingRelationships: {
+    "userA": "A",
+    "userB": "B"
+}
