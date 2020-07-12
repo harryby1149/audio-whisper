@@ -1,0 +1,27 @@
+h2 {
+    font-size: 2em;
+    letter-spacing: -0.06em;
+}
+
+input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid lightgray;
+    margin: 5% 0;
+    font-size: 1.25em;
+    width: 75%;
+    height: 2em;
+}
+
+input[type="submit"] {
+    width: 50%;
+    background-color: black;
+    color: #fff;
+    opacity: 75%;
+    margin-left: 25%;
+}
+
+input[type="submit"]:hover {
+    border: 5px solid blue;
+}

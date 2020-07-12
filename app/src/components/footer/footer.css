@@ -1,0 +1,35 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 2rem;
+    display: flex;
+    width: 100%;
+    padding: 1em;
+    color: black;
+    background-color: lightgray;
+}
+
+#footerText {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#footerLink {
+    text-decoration: none;
+    color: black;
+}
+
+#footerLink:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+#footerLink:focus {
+    color:blue;
+}
+
+.separator {
+    margin: 0 2.5%;
+}
+

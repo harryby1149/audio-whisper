@@ -1,0 +1,13 @@
+svg {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+path {
+  fill: transparent;
+  opacity: "0.5";
+  stroke-opacity: 0.5;
+  stroke: white;
+  stroke-width: 0.01em;
+  /*vector-effect: non-scaling-stroke;*/
+}
