@@ -5,7 +5,6 @@ class SineWave extends Component {
     constructor(props) {
         super(props);
         this.svgElem = createRef();
-        this.path = createRef();
         this.state = {
             numberOfLines: 100,
             lineDataArr: [],
@@ -86,19 +85,18 @@ class SineWave extends Component {
                     cos: this.randomRange(minSpeed, maxSpeed),
                     //sin: 120,
                     //cos: 85,
-                    pointX: this.randomRange(30, 55),
-                    centerX: this.randomRange(90, 120),
-                    centerY: this.randomRange(60, 70)
-                    //pointX: 40,
-                    // centerX: 100,
-                    // centerY: 60
+                    // pointX: this.randomRange(30, 55),
+                    // centerX: this.randomRange(90, 120),
+                    // centerY: this.randomRange(60, 70)
+                    pointX: 40,
+                    centerX: 100,
+                    centerY: 60
                 }
                 this.state.lineDataArr.push(lineDataObj)
             }
 
             // once the path elements are created, start the animation loop
             svgEl.append(this.state.pathEl);
-            console.log(svgEl);
             this.animLoop();
     }
 
@@ -110,7 +108,7 @@ class SineWave extends Component {
     render() {
         return (
             <div>
-                <svg className="animated-lines" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" ref={this.svgElem} />
+                <svg className="animated-lines" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 10 200 120" ref={this.svgElem} />
             </div>
         );
     };
