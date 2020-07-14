@@ -2,7 +2,6 @@ import React from 'react';
 import './container.css';
 
 export default function DashboardContainer(props) {
-
     return (
         <div className="main">
             {props.projects? 

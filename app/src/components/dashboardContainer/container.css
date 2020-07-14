@@ -1,4 +1,6 @@
 .main {
+    position: relative;
+    border: 10px red solid;
     margin: auto;
     font-size: 64px;
 }

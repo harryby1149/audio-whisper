@@ -20,10 +20,17 @@ class Dashboard extends Component {
     }
 
     toggleDisplay = (type) => {
-        this.setState({
-            [type]: true,
-            [!type]: false,
-        })
+        for (const k in this.state) {
+            if (k === type) {
+                this.setState({
+                    [k]: true
+                })
+            } else {
+                this.setState({
+                    [k]: false
+                })
+            }
+        }
     }
 
     logout = () => {
