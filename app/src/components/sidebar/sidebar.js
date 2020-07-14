@@ -1,93 +1,69 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    useRouteMatch,
+    Redirect,
+    useHistory,
+    useLocation,
+} from "react-router-dom";
 import './sidebar.css';
 
-export default function Sidebar() {
+export default function Sidebar(props) {
     return (
-        <nav class="main-menu">
+        (props.redirect) ? <Redirect
+        to={{
+            pathname: "/",
+            //state: { from: location }
+        }}
+    />  : 
+        <nav className="main-menu">
             <ul>
                 <li>
-                    <a href="http://justinfarrow.com">
-                        <i class="fa fa-home fa-2x"></i>
-                        <span class="nav-text">
-                            Dashboard
+                    <a onClick={() => props.toggleDisplay('projects')} href="#">
+                        <i className="fa fa-play-circle fa-2x"></i>
+                        <span className="nav-text">
+                            Projects
                         </span>
                     </a>
                   
                 </li>
-                <li class="has-subnav">
-                    <a href="#">
-                        <i class="fa fa-laptop fa-2x"></i>
-                        <span class="nav-text">
-                            Stars Components
+                <li>
+                    <a onClick={()=>props.toggleDisplay('comments')} href="#">
+                        <i className="fa fa-comments fa-2x"></i>
+                        <span className="nav-text">
+                            Comments
                         </span>
                     </a>
                     
                 </li>
-                <li class="has-subnav">
-                    <a href="#">
-                       <i class="fa fa-list fa-2x"></i>
-                        <span class="nav-text">
-                            Forms
+                <li>
+                    <a onClick={()=>props.toggleDisplay('friends')} href="#">
+                       <i className="fa fa-users fa-2x"></i>
+                        <span className="nav-text">
+                            Friends
                         </span>
                     </a>
                     
                 </li>
-                <li class="has-subnav">
-                    <a href="#">
-                       <i class="fa fa-folder-open fa-2x"></i>
-                        <span class="nav-text">
-                            Pages
+                <li>
+                    <a onClick={()=>props.toggleDisplay('account')} href="#">
+                       <i className="fa fa-cog fa-2x"></i>
+                        <span className="nav-text">
+                            Account
                         </span>
                     </a>
                    
                 </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-bar-chart-o fa-2x"></i>
-                        <span class="nav-text">
-                            Graphs and Statistics
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-font fa-2x"></i>
-                        <span class="nav-text">
-                           Quotes
-                        </span>
-                    </a>
-                </li>
-                <li>
-                   <a href="#">
-                       <i class="fa fa-table fa-2x"></i>
-                        <span class="nav-text">
-                            Tables
-                        </span>
-                    </a>
-                </li>
-                <li>
-                   <a href="#">
-                        <i class="fa fa-map-marker fa-2x"></i>
-                        <span class="nav-text">
-                            Maps
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                       <i class="fa fa-info fa-2x"></i>
-                        <span class="nav-text">
-                            Documentation
-                        </span>
-                    </a>
-                </li>
-            </ul>
+                </ul>
 
-            <ul class="logout">
+            <ul className="logout">
                 <li>
-                   <a href="#">
-                         <i class="fa fa-power-off fa-2x"></i>
-                        <span class="nav-text">
+                   <a onClick={()=>props.logout()}>
+                         <i className="fa fa-power-off fa-2x"></i>
+                        <span className="nav-text">
                             Logout
                         </span>
                     </a>
