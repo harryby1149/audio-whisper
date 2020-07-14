@@ -19,6 +19,7 @@ export default function Sidebar(props) {
             //state: { from: location }
         }}
     />  : 
+    <div className="container">
         <nav className="main-menu">
             <ul>
                 <li>
@@ -70,5 +71,6 @@ export default function Sidebar(props) {
                 </li>  
             </ul>
         </nav>
+        </div>
     )
 }

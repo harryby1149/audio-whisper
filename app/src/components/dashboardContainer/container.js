@@ -5,16 +5,52 @@ export default function DashboardContainer(props) {
     return (
         <div className="main">
             {props.projects? 
-                <div>Projects</div>
+                <>
+                <h2 className="mainCon">Projects</h2>
+                <div className="subCon">
+                    <ul>
+                        <li>Bull</li>
+                        <li>Shit</li>
+                        <li>Content!</li>
+                    </ul>
+                </div>
+                </>
             : null}
             {props.account? 
-                <div>Account</div>
+                <>
+                <h2 className="mainCon">Account</h2>
+                <div className="subCon">
+                    <ul>
+                        <li>Bull</li>
+                        <li>Shit</li>
+                        <li>Content!</li>
+                    </ul>
+                </div>
+                </>
             : null}
             {props.comments? 
-                <div>Comments</div>
+            <>
+                <h2 className="mainCon">Comments</h2>
+                <div className="subCon">
+                    <ul>
+                        <li>Bull</li>
+                        <li>Shit</li>
+                        <li>Content!</li>
+                    </ul>
+                </div>
+                </>
             : null}
             {props.friends? 
-                <div>Friends</div>
+            <>
+                <h2 className="mainCon">Friends</h2>
+                <div className="subCon">
+                    <ul>
+                        <li>Bull</li>
+                        <li>Shit</li>
+                        <li>Content!</li>
+                    </ul>
+                </div>
+                </>
             : null}
         </div>
     )

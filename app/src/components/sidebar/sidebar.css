@@ -17,9 +17,14 @@
 
 .main-menu:hover,
 nav.main-menu.expanded {
-  width: 25%;
+  width: 35%;
   height: 36.31rem;
   overflow: hidden;
+}
+
+.container {
+  position: absolute;
+  width: 50%;
 }
 
 .main-menu {
