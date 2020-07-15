@@ -8,6 +8,7 @@
     margin: 4rem auto;
     background-color: whitesmoke; 
     border-radius: .1em;
+    box-shadow: 0px 0px 10px black;
     justify-content: center;
 }
 

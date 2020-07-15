@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Titillium + Web:300);
-
 @media only screen and (max-width: 1101px) {
   .subtitle {
     font-size: 1rem;
@@ -118,13 +116,4 @@
 
 #headerLink:focus {
   color: white;
-}
-
-@font-face {
-  font-family: "Titillium Web";
-  font-style: normal;
-  font-weight: 300;
-  src: local("Titillium WebLight"), local("TitilliumWeb-Light"),
-    url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff)
-      format("woff");
 }
