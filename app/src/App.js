@@ -6,7 +6,8 @@ import Dashboard from './pages/dashboard/dashboard';
 
 function App() {
     return (
-      <Router basename={window.location.pathname || ''}>
+      // <Router basename={window.location.pathname || ''}> Put this in during production
+      <Router>
         <Switch>
           <Route exact path="/" component={Landing}/>
           <Route exact path="/dashboard" component={Dashboard}/>
