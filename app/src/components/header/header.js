@@ -88,8 +88,6 @@ class Header extends Component {
 
     render() {
         let location= window.location.href;
-        const regex = /dashboard/g;
-        const found = location.match(regex);
         return (
             (this.state.redirect) ? <Redirect
                 to={{
@@ -104,12 +102,14 @@ class Header extends Component {
                                 <h1 className="title">Audio Whisper</h1>
                                 <h3 className='subtitle'>Share | Collaborate | Remix</h3>
                             </div>
-                            {found ? <div className="joinContainer">
-                            </div> : 
+                            {location === 'http://localhost:3000/' ?  
                             <div className="joinContainer">
                                 <div className="signupLink" id="headerText"><a id="headerLink" href="#open-signup">Signup</a></div>
                                 <div className="headerSeparator" id="headerText">|</div>
                                 <div className="loginLink" id="headerText"><a id="headerLink" href="#open-login">Login</a></div>
+                            </div> 
+                            :
+                            <div className="joinContainer">
                             </div>
                             }
                         </header>
