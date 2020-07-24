@@ -1,0 +1,39 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+i.awe {
+    font-size: 1rem;
+    width: 100% !important;
+    height: 0px !important;
+}
+
+.promoHolder {
+    display: flex;
+    width: auto;
+}
+
+.promoSongArtist {
+    font-size: .75em;
+}
+
+.promoSongImg {
+    padding: 2%;
+    margin: 0 auto;
+}
+
+.promoSongTitle {
+    font-size: 1em;
+}
+
+.promoText {
+    width: 100%;
+    padding: 2%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.transport {
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+}

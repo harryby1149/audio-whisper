@@ -1,16 +1,19 @@
 import React from 'react';
 import './activityContainer.css';
+import SongDisplayBox from '../songDisplayBox/songDisplayBox';
 
-export default function ActivityContainer() {
+export default function ActivityContainer(props) {
+    
     return (
         <div className='latestActivityContainer'>
             <h1 className="activityHeader">Latest Jams</h1>
             <div className="boxContainer">
-                <div className="activityBox">BOX 1</div>
-                <div className="activityBox">BOX 2</div>
-                <div className="activityBox">BOX 3</div>
-                <div className="activityBox">BOX 4</div>
-                <div className="activityBox">BOX 5</div>
+                {Object.keys(props.songData).map(function(key, index) {
+                    return (
+                        <SongDisplayBox title={props.songData[key].title} artist={props.songData[key].artist} img={props.songData[key].img} />
+                    )
+                })
+            }
             </div>
         </div>
     )
