@@ -46,7 +46,7 @@ export default function DashboardContainer(props) {
                     <>
                         <h2 className="mainCon">Projects</h2>
                         <div className="subCon">
-                            {projects ? Object.keys(projects).map(function (key, index) {
+                            {projects ? Object.keys(projects).map(function (key) {
                                 return (
                                     <SongDisplayBox title={projects[key].title} artist={projects[key].artist} img={projects[key].img} url={projects[key].url}/>
                                 )

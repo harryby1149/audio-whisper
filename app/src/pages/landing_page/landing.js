@@ -23,17 +23,7 @@ export default function Landing() {
             artist: 'Feart',
             img: "https://picsum.photos/100",
         },
-        song4: {
-            title: 'Fart on My Knees',
-            artist: 'Johnny Fartman',
-            img: "https://picsum.photos/100",
-        },
-        song5: {
-            title: 'Hot momma tang fart',
-            artist: 'Jimbo Jenkins and the Fart Twins',
-            img: "https://picsum.photos/100",
-        },
-    }
+        }
 
     return (
         <div>
