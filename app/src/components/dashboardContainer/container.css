@@ -1,0 +1,33 @@
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    max-width: 50%;
+    margin: 4rem auto;
+    background-color: whitesmoke; 
+    border-radius: .1em;
+    box-shadow: 0px 0px 10px black;
+    justify-content: center;
+}
+
+.mainCon {
+    position: relative;
+    width: auto;
+    border-radius: .1em .1em 0 0;
+    background-color: lightgray;
+    color: #383838;
+    text-align: center;
+    border-bottom: 1px solid grey;
+    padding: 5%;
+    margin-top: -0.67em;
+    margin-bottom: -0.67em;
+}
+
+.subCon {
+    position: relative;
+    margin: 2% auto;
+    padding: 2%;
+    width: 75%;
+}

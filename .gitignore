@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 /app/node_modules
+/AudioFileService/node_modules
 
 # testing
 /coverage
