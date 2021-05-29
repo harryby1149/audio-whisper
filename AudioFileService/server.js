@@ -1,20 +1,14 @@
 require('dotenv').config()
-const app = require('express')()
-const port = 8001
-const AwsClient = require("./clients/AwsClient");
+const express = require('express');
+const app = express();
+const port = 8001;
+const awsRoutes = require('./routes/AwsRoutes');
+const userRoutes = require('./routes/UserRoutes')
+app.use(express.json());
+app.use(express.urlencoded({extended: false}))
 
-app.get('/audio/:audioObjectId', (req, res) => {
-  AwsClient.getObject(req.params.audioObjectId).then((response)=>{
-        console.log(response.Body);
-        res.send('Hello World!')
-    });
-})
-
-app.post('/audio', (req, res) => {
-    AwsClient.postObject({fileId, body} = req).then((response) =>{
-        console.log(response.Body);
-    })
-})
+app.use(awsRoutes)
+app.use(userRoutes)
 
 app.listen(port, () => {
     console.log('app now listening on port: ' + port)

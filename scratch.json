@@ -1,32 +1,48 @@
-User: {
+{
+    "User": {
     "id": "userId",
-    "posts": ["postId1", "postId2"],
-    "userId": "id",
     "username": "name",
-    "tracks": ["trackId", "trackId", "trackId"]
-}
+    "passwordHash": "hash"
+},
 
-Track: {
+"Track": {
     "id": "trackId",
-    "urlToRetrieveAudioFromBucket": "//aws.amazon.s3....",
-    "urlToRetrieveProjectAudioFromBucket":"//aws.amazon.s3....",
-    "parentTrack": "trackId",
-    "trackName": "trackName",
-    "trackDetails": "some stuff about the track"
-}
+    "authorid": "User.id",
+    "audifilekey": "//aws.amazon.s3....", 
+    "audioprojectkey":"//aws.amazon.s3....",
+    "parentk": "Track.id",
+    "trackname": "trackName",
+    "trackdetails": "user description of track"
+},
 
-Comment: {
+"Comment": {
     "id": "commentId",
-    "userId": "userId",
-    "content": "blah blah"
-}
+    "trackId": "Track.id",
+    "userId": "User.id",
+    "content": "message"
+},
 
-UserLikesTrack: {
-    "userId": "userId",
-    "trackId": "trackId"
-}
+"TrackRelationships": {
+    "id": "trackrealtionShipId",
+    "userId": "User.id",
+    "relationship": "like, dislike etc.",
+    "targetId": "Track.id, Comment.id etc."
+},
 
-FollowingRelationships: {
-    "userA": "A",
-    "userB": "B"
+"CommentRelationships":{
+    "id": "trackrealtionShipId",
+    "userId": "User.id",
+    "relationship": "like, dislike etc.",
+    "targetId": "Track.id, Comment.id etc."
+},
+
+"SocialRelationships": {
+    "userA": "User.id",
+    "relationship": "friends, pending, blocked",
+    "userB": "User.id"
+},
+
+"dbpassword": "sunshine1234",
+"dbusername": "awadmin",
+"dbname": "generaloperations"
 }
