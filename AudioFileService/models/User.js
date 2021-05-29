@@ -1,8 +1,14 @@
-function User(id, username) {
-    this.id = id,
-    this.username = username,
-    this.tracks = [],
-    this.friends = []
+const User = {
+    id : "",
+    username: "",
+    tracks: [],
+    friends: [],
+    initUser: (id, username) => {
+        this.id = id;
+        this.username = username;
+        return this;
+    }
+
 }
 
-module.exports = User;
+module.exports = {User}

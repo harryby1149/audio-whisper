@@ -26,7 +26,7 @@
     "id": "trackrealtionShipId",
     "userId": "User.id",
     "relationship": "like, dislike etc.",
-    "targetId": "Track.id, Comment.id etc."
+    "targetId": "Track.id"
 },
 
 "CommentRelationships":{
