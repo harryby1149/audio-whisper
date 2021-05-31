@@ -9,7 +9,7 @@ router.post("/login", async (req, res) => {
     const isVerified = await verify(passwordHash[0].password_hash, password);
     if(isVerified){
         res.status(200)
-        res.send(await getUser(username))
+        res.send(await getUserSummary(username))
     } else {
         res.status(401)
         res.send({error: "Incorrect username or password"})
@@ -33,8 +33,8 @@ router.post('/user', async (req, res) => {
     } 
 }) 
 
-router.get('/user', async (req, res) => {
-    console.log(req.body.username)
-    const user = await getUser(req.body.username)
+router.get('/user/:userId', async (req, res) => {
+    console.log(req.params.userId)
+    const user = await getUser(req.params.userId)
     res.send(user)
 })
