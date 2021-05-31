@@ -1,6 +1,6 @@
 const router = module.exports = require('express')()
 const {verify} = require('../utilities/HashUtilities');
-const {getPassword, getUser, postUser} = require('../clients/PostgresClient');
+const {getPassword, getUserSummary, postUser} = require('../clients/PostgresClient');
 const Assertions = require('../utilities/PostgresUtilities');
 
 router.post("/login", async (req, res) => {
@@ -35,6 +35,6 @@ router.post('/user', async (req, res) => {
 
 router.get('/user/:userId', async (req, res) => {
     console.log(req.params.userId)
-    const user = await getUser(req.params.userId)
+    const user = await getUserSummary(req.params.userId)
     res.send(user)
 })
